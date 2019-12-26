@@ -15,7 +15,7 @@ class ReservationsTableSeeder extends Seeder
         for ($i=1; $i <3 ; $i++) 
         {
         DB::table('Reservations')->insert([
-    
+           'num_reservation'=>$i,
             'reference_reservation' => "FA".$i.$i.$i.$i.$i.$i,
             'date_reservation' => now(),
             'prix_reservation' =>300000,

@@ -15,15 +15,16 @@ class CreateReservationClientsTable extends Migration
     {
         Schema::create('reservation_clients', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('reference_reservation',8)->index();
+            $table->unsignedBigInteger('num_reservation')->index();
 
             $table->unsignedBigInteger('num_client')->index();
+            $table->boolean('type_client')->nullable();
 
 
         });
         Schema::table('reservation_clients', function($table) 
         {
-            $table->foreign('reference_reservation')->references('reference_reservation')->on('reservations');
+            $table->foreign('num_reservation')->references('num_reservation')->on('reservations');
             $table->foreign('num_client')->references('num_client')->on('clients');
 
 

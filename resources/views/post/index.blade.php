@@ -1,18 +1,15 @@
-@extends('layout')
-@section('content')
-<html>
- <body>
-<h1>Client </h1>
-<?php foreach($clients as $cl)
-{
-echo'<ul>';   
-echo'<li>' .$cl->name.'<h6> email:</h6> <em class="text-muted">'.$cl->email.'</em></li></ul>';
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
 
-}
-?>
-
-<hr>
-<form action="/clients" method="POST">
+    <form action="" method="POST">
 <!-- alors pour eviter les failles de securite si la personne est legitime -->
 @csrf
 <div class="form-group">
@@ -41,11 +38,67 @@ echo'<li>' .$cl->name.'<h6> email:</h6> <em class="text-muted">'.$cl->email.'</e
 
 <button type="submit" class="btn btn-primary">Ajouter </button>
 </form>
-    
+
+ 
+
+  {{dd($data)}}
+ 
+ <?php  
+// foreach ($data as   $value) 
+
+// {
+//     foreach($value as $key=>$v)
+//     {
+//     echo 'le nom de l attribut  est '.$key.'la valeur est :'.$v;
+//     }
+// }
+
+
+
+
+?>
+</br>
+
+@foreach ($req as $value)
+ @foreach ($value as $v)
+   {{$v}}
+   @endforeach
+
+ @endforeach 
+
+{{$affected}}
+foreach ($users as $user) {
+     {{$user->pseudo}}
+}
+
+
+<?php
+
+foreach ($users as $user )
+ {
+     
+     {
+    echo $user->pseudo.'</br>',
+         $user->email; 
+     }
+}
+?>
+
+
+{{dd($user)}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>
-@endsection
-    
-    
-
-
