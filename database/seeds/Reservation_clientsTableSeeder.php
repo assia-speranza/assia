@@ -16,7 +16,7 @@ class Reservation_clientsTableSeeder extends Seeder
       
         DB::table('Reservation_clients')->insert([
             
-            'reference_reservation' => "FA222222",
+            'num_reservation' => 1,
             'num_client' =>2,
             ]);
 

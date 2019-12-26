@@ -12,14 +12,58 @@ class EscalsTableSeeder extends Seeder
     public function run()
     {
         //
+        //     DB::table('Escales')->insert([
+        //     'date_escale'=>"2019-11-30 08:00:00",
+        //    'heure_depart_escale'=>"09:30:00",
+        //     'heure_arriver_escale'=>"09:00:00",
+        //     'duree_escale'=>"01:00:00",
+        //     'id_vol'=>'3',
+        //     'code_aeroport_depart'=>"ALG",
+        //     'code_aeroport_arriver'=>"CDG",
+
+        //     ]);
+        //Berlin  
         DB::table('Escales')->insert([
-        'date_escale'=>"2019-11-30 08:00:00",
-       'heure_depart_escale'=>"09:30:00",
-        'heure_arriver_escale'=>"09:00:00",
-        'duree_escale'=>"01:00:00",
-        'id_vol'=>'3',
-        'code_aeroport'=>"ALG",
+            // 'date_escale'=>"2019-11-30 08:00:00",
+            'heure_depart_escale' => "",
+            'heure_arriver_escale' => "",
+            // 'duree_escale' => "",
+            'id_vol' => '',
+            'code_aeroport_depart' => "ALG",
+            'code_aeroport_arriver' => "",
+
         ]);
 
+        DB::table('Escales')->insert([
+            // 'date_escale'=>"2019-11-30 08:00:00",
+            'heure_depart_escale' => "",
+            'heure_arriver_escale' => "",
+            'duree_escale' => "",
+            'id_vol' => '3',
+            'code_aeroport_depart' => "ALG",
+            'code_aeroport_arriver' => "CDG",
+
+        ]);
+
+        DB::table('Escales')->insert([
+            // 'date_escale'=>"2019-11-30 08:00:00",
+            'heure_depart_escale' => "",
+            'heure_arriver_escale' => "",
+            'duree_escale' => "",
+            'id_vol' => '3',
+            'code_aeroport_depart' => "ALG",
+            'code_aeroport_arriver' => "CDG",
+
+        ]);
+        DB::table('Escales')->insert([
+            // 'date_escale'=>"2019-11-30 08:00:00",
+            'heure_depart_escale' => "",
+            'heure_arriver_escale' => "",
+            'duree_escale' => "",
+            'id_vol' => '3',
+            'code_aeroport_depart' => "ALG",
+            'code_aeroport_arriver' => "CDG",
+
+        ]);
     }
 }

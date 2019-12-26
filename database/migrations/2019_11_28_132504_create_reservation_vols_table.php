@@ -15,7 +15,7 @@ class CreateReservationVolsTable extends Migration
     {
         Schema::create('reservation_vols', function (Blueprint $table) {
             $table->bigIncrements('id');  
-            $table->string('reference_reservation',8)->index();
+            $table->unsignedBigInteger('num_reservation');
             $table->unsignedBigInteger('id_vol')->index();
 
         });
@@ -23,7 +23,7 @@ class CreateReservationVolsTable extends Migration
 
         Schema::table('reservation_vols', function($table)
          {
-        $table->foreign('reference_reservation')->references('reference_reservation')->on('reservations');
+        $table->foreign('num_reservation')->references('num_reservation')->on('reservations');
         $table->foreign('id_vol')->references('id')->on('vols');
         
 

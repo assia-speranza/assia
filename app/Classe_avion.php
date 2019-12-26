@@ -4,7 +4,20 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Personnels extends Model
+class Classe_avion extends Model
 {
     //
+
+
+
+
+
+
+
+
+
+
+
+
+    
 }

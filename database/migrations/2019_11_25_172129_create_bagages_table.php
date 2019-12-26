@@ -20,9 +20,20 @@ class CreateBagagesTable extends Migration
             $table->integer('nb_bagage_accessoir');
             $table->integer('nb_bagage_soute');
             $table->double('prix_bagage_soute');
+            $table->dateTime('updated_at')->nullable();
+       
+            $table->unsignedBigInteger('num_enregistrement'); 
           
         });
+         
+        
+       
+        Schema::table('bagages', function($table) {
+           
+            $table->foreign('num_enregistrement')->references('num_enregistrement')->on('enregistrements'); 
+            
 
+        });
         
 
 

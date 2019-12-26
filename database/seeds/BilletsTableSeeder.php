@@ -18,7 +18,7 @@ class BilletsTableSeeder extends Seeder
         DB::table('Billets')->insert([
 
             'num_billet'=>2131911111111,
-            'reference_reservation' => "FA222222",
+            'num_reservation' => 1,
             'num_client' =>2,
             ]);
 
